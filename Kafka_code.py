@@ -7,7 +7,7 @@ app = FastAPI()
 
 # Kafka Producer Config
 conf = {
-    'bootstrap.servers': 'localhost:9092',   # change if using remote broker
+    'bootstrap.servers': 'localhost:9092',   # change if using remote brokerr
 }
 producer = Producer(conf)
 
@@ -36,5 +36,5 @@ async def receive_event(request: Request):
 
     # 2️⃣ Send event to Kafka
     send_to_kafka("customer-events", event_data)
-
-    return {"status": "success", "message": "Event processed"}
+    print("hi,hello")
+    return {"status": "success", "message": "Event processed"} 
